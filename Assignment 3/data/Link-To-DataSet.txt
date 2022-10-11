@@ -1,0 +1,2 @@
+Data sets: (i) https://snap.stanford.edu/data/ego-Facebook.html
+(ii) https://snap.stanford.edu/data/soc-sign-bitcoin-otc.html
