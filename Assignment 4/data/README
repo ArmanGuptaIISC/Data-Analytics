@@ -1,0 +1,42 @@
+Folder contains following file:
+
+1. chrX.fa: The reference sequence for Chr x in fasta format
+            First line is header line followed by the sequence (ignore the newlines)
+
+2. chrX_last_col.txt : The last column of the BWT(Borrow-Wheeler Transformation).
+                       This sequence contains one more character than the reference sequence as it also contains
+		       the special character $ which is appended to its end
+		
+3. chrX_map.txt: Contains mapping of indexes in bwt with index in ref.
+                 Line number i (0-based) has the starting index in the reference of the ith sorted circular shift
+                 eg. First line contains 3435 means that the string starting
+                     at 3435 (0-based) is the first in sort order of bwt rotated strings.
+                 	
+4. reads:  Contains about 3 million reads, one read per line, reads are roughly of length 100, but may not
+           be exactly so. Also each read could come from the reference sequence or its reverse complement, so
+           consider reverse complements of each read as well.
+
+5. Red and Green gene locations: Each of these genes should begin with ATGGCCCAGCAGTGGAGCCTC. You can grep for it and the red and green starting positions should appear at (0-based):
+
+Red exons:
+149249757 - 149249868
+149256127 - 149256423
+149258412 - 149258580
+149260048 - 149260213
+149261768 - 149262007
+149264290 - 149264400
+
+Green exons:
+149288166 - 149288277
+149293258 - 149293554
+149295542 - 149295710
+149297178 - 149297343
+149298898 - 149299137
+149301420 - 149301530
+
+As a test, use the following read:
+GAGGACAGCACCCAGTCCAGCATCTTCACCTACACCAACAGCAACTCCACCAGAGGTGAGCCAGCAGGCCCGTGGAGGCTGGGTGGCTGCACTGGGGGCCA
+which should match at 149249814.
+
+
+
